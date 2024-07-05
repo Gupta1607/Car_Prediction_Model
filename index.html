@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Reselling Price Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="slide.js"></script>
+
+</head>
+<body>
+    <div class="container">
+        <h1>Car Reselling Price Prediction</h1>
+        <form id="prediction-form">
+            <label for="kilometers-driven">Kilometers Driven:</label>
+            <input type="number" id="kilometers-driven" name="kilometersDriven" min="0" max="500000" required>
+            
+            <label for="mileage">Mileage (km/l or km/kg):</label>
+            <input type="number" id="mileage" name="mileage" step="0.1" min="0" max="50" required>
+            
+            <label for="engine">Engine (CC):</label>
+            <input type="number" id="engine" name="engine" min="500" max="5000" required>
+            
+            <label for="power">Power (bhp):</label>
+            <input type="number" id="power" name="power" step="0.1" min="20" max="500" required>
+            
+            <label for="age-of-car">Age of Car:</label>
+            <input type="number" id="age-of-car" name="ageOfCar" min="0" max="30" required>
+            
+            <label for="seats">Seats:</label>
+            <input type="number" id="seats" name="seats" min="2" max="10" required>
+            
+            <label for="location">Location:</label>
+            <select id="location" name="location" required>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Coimbatore">Coimbatore</option>
+                <option value="Delhi">Delhi</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Jaipur">Jaipur</option>
+                <option value="Kochi">Kochi</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Pune">Pune</option>
+            </select>
+
+            <label for="fuel-type">Fuel Type:</label>
+            <select id="fuel-type" name="fuelType" required>
+                <option value="Diesel">Diesel</option>
+                <option value="Electric">Electric</option>
+                <option value="LPG">LPG</option>
+                <option value="Petrol">Petrol</option>
+            </select>
+
+            <label for="transmission">Transmission:</label>
+            <select id="transmission" name="transmission" required>
+                <option value="Manual">Manual</option>
+                <option value="Automatic">Automatic</option>
+            </select>
+
+            <label for="owner-type">Owner Type:</label>
+            <select id="owner-type" name="ownerType" required>
+                <option value="First">First</option>
+                <option value="Second">Second</option>
+                <option value="Third">Third</option>
+                <option value="Fourth & Above">Fourth & Above</option>
+            </select>
+            
+            <label for="brand">Brand:</label>
+            <select id="brand" name="brand" required>
+                <option value="Audi">Audi</option>
+                <option value="BMW">BMW</option>
+                <option value="Bentley">Bentley</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Datsun">Datsun</option>
+                <option value="Fiat">Fiat</option>
+                <option value="Force">Force</option>
+                <option value="Ford">Ford</option>
+                <option value="Honda">Honda</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Isuzu">Isuzu</option>
+                <option value="Jaguar">Jaguar</option>
+                <option value="Jeep">Jeep</option>
+                <option value="Lamborghini">Lamborghini</option>
+                <option value="Land Rover">Land Rover</option>
+                <option value="Mahindra">Mahindra</option>
+                <option value="Maruti">Maruti</option>
+                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                <option value="Mini Cooper">Mini Cooper</option>
+                <option value="Mitsubishi">Mitsubishi</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Porsche">Porsche</option>
+                <option value="Renault">Renault</option>
+                <option value="Skoda">Skoda</option>
+                <option value="Smart">Smart</option>
+                <option value="Tata">Tata</option>
+                <option value="Toyota">Toyota</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Volvo">Volvo</option>
+            </select>
+            
+            <label for="class-of-brand">Class of Brand:</label>
+            <select id="class-of-brand" name="classOfBrand" required>
+                <option value="Low_class">Low Class</option>
+                <option value="Mid_class">Mid Class</option>
+                <option value="High_class">High Class</option>
+            </select>
+            
+            <button type="submit">Predict Price</button>
+        </form>
+        <div id="result"></div>
+    </div>
+</body>
+</html>
+               
