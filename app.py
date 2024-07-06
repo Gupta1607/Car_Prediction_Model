@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import pandas as pd
 import joblib
+from flask_cors import cross_origin
 
 app = Flask(__name__)
 
@@ -8,6 +9,7 @@ app = Flask(__name__)
 model = joblib.load('car_price_prediction_model.pkl')
 
 @app.route('/predict', methods=['POST'])
+@cross_origin()
 def predict():
     data = request.json
 

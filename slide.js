@@ -4,7 +4,7 @@ document.getElementById('prediction-form').addEventListener('submit', function(e
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData.entries());
 
-    fetch('/predict', {  // Ensure your backend API URL is correct
+    fetch('http://127.0.0.1:5000/predict', {  // Ensure your backend API URL is correct
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
